@@ -1,7 +1,8 @@
 # Rspec Drill Bank Account 
  
-##Learning Competencies 
-
+##Learning Competencies
+- What to test: We test behavior not implementation
+- How to unit test with Rspec
 ##Summary 
 
  A bank account provides a useful example for discussing object-oriented design because the needs for security and privacy are imminent and obvious.  A bank account should not reveal certain things about itself so easily, like the account number, for example.
@@ -45,7 +46,6 @@ Remember to ensure that your spec is actually testing what you want by ensuring 
 
 For a quick reference of the RSpec API, check out the [cheat sheet](http://cheat.errtheblog.com/s/rspec). 
 
-##Releases
 ###Release 0 
 
 ##Optimize Your Learning 
