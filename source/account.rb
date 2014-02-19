@@ -12,13 +12,13 @@ class Account
     transactions.inject(:+)
   end
 
-  def acct_number
+  def hide_acct_number
     hidden_length = @acct_number.length - 4
     @acct_number.sub(Regexp.new("^.{#{hidden_length}}"), "*" * hidden_length)
   end
 
-  def deposit!(amount) 
-    raise NegativeDepositError if amount < 0 
+  def deposit!(amount)
+    raise NegativeDepositError if amount < 0
     add_transaction(amount)
 
     balance
@@ -28,7 +28,7 @@ class Account
     amount = -amount if amount > 0
     add_transaction(amount)
 
-    balance
+    balance2
   end
 
 private
