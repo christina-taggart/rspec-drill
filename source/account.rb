@@ -1,8 +1,8 @@
 class Account
-  attr_reader :transactions
+  attr_accessor :transactions
 
   def initialize(acct_number, starting_balance = 0)
-    validate_number(acct_number)
+    validate_account_number(acct_number)
 
     @acct_number  = acct_number
     @transactions = [ starting_balance ]
@@ -28,12 +28,12 @@ class Account
     amount = -amount if amount > 0
     add_transaction(amount)
 
-    balance2
+    balance
   end
 
 private
 
-  def validate_number(number)
+  def validate_account_number(number)
     unless valid_number?(number)
       raise InvalidAccountNumberError
     end
